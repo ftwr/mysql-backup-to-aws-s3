@@ -1,4 +1,4 @@
-# mysql-backup-to-aws-s3
+# mysql-backup-to-aws-s3 (without locking tables, and delete old backups in s3 via shell)
 
 ## create backup user for mysql or percona
 ```shell
