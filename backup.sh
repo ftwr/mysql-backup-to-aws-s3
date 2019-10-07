@@ -1,4 +1,5 @@
 #!/bin/bash
+
 aws s3 ls sql.pozitiff.ua-bak/ | while read -r line;
        do
         createDate=`echo $line|awk {'print $1" "$2'}`
@@ -16,7 +17,7 @@ aws s3 ls sql.pozitiff.ua-bak/ | while read -r line;
 
        done;
 
-rm -rf /home/ubuntu/percona-full-backup-*
+rm /home/ubuntu/percona-full-backup-*
 
 /usr/bin/mysqldump --defaults-extra-file=/home/ubuntu/.my.cnf -h0.0.0.0 -P3306 --single-transaction --quick --lock-tables=false --all-databases > /home/ubuntu/percona-full-backup-$(date +\%F).sql
 
