@@ -17,7 +17,8 @@ touch .my.cnf
 chmod 600 .my.cnf
 ```
 ## insert this in .my.cnf
+```shell
 [client]
 login="mysql_r00t"
 password="mysql_pa$$"
-
+```
