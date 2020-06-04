@@ -22,3 +22,8 @@ chmod 600 .my.cnf
 login="mysql_r00t"
 password="mysql_pa$$"
 ```
+
+## crontab -e
+```shell
+0 0 * * * /root/myscript >> /root/myscript.log 2>&1
+```
